@@ -1,0 +1,261 @@
+:root {
+  --mainColor: #008dda;
+  --subColor: #008dda;
+  --hoverColor: #ace2e1;
+  --bodyColor: #f7eedd;
+  --fontColor: #383838;
+
+  --transition: all 0.3s;
+
+  /* header */
+  --logoColor: var(--bodyColor);
+  --logoBgColor: var(--hoverColor);
+  /* footer */
+  --footerBgColor: #6f6f6f;
+  --footerTextColor: #c9c9c9;
+}
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "S-CoreDream-3Light";
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.btn {
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: "S-CoreDream-3Light";
+}
+.btn-main {
+  background-color: var(--mainColor);
+  color: #fff;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+.btn-main:hover {
+  background-color: var(--hoverColor);
+}
+
+/* LOGO */
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.logo {
+  width: fit-content;
+  /* padding: 10px 25px 14px; */
+  /* background-color: var(--logoBgColor); */
+  /* border-radius: 35px; */
+  transition: var(--transition);
+  cursor: pointer;
+}
+.logo a {
+  display: inline-block;
+  width: 100%;
+  font-family: "PyeongChangPeace-Bold";
+  font-size: 2rem;
+  color: var(--logoColor);
+  font-weight: bold;
+}
+
+/* Header */
+.header-bg {
+  background-color: var(--mainColor);
+}
+header {
+  width: 100%;
+  height: 60px;
+  padding: 10px 0;
+}
+.header-logo {
+  flex-grow: 1;
+}
+
+/* Header - top-nav */
+.top-nav {
+  flex-grow: 1;
+  justify-content: center;
+}
+.top-nav .nav-item {
+  margin-right: 20px;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+.top-nav .nav-item:last-child {
+  margin-right: 0;
+}
+.top-nav .nav-item a {
+  color: var(--fontColor);
+  transition: var(--transition);
+}
+.top-nav .nav-item:hover a {
+  color: var(--hoverColor);
+  font-weight: bold;
+}
+.top-nav .active-item a {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Header - search */
+.search {
+  flex-grow: 1;
+  position: relative;
+  text-align: right;
+}
+.search input {
+  width: 80%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+.search .fa-solid {
+  position: absolute;
+  width: 17px;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+}
+
+.search input:focus {
+  outline: var(--subColor) 2px solid;
+}
+
+/* Main */
+.movie-box {
+  padding: 20px 0 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: normal;
+}
+/* Card */
+.card {
+  width: 24%;
+  background-color: #eeeeee99;
+  border-radius: 10px;
+  margin-bottom: 20px;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card img {
+  width: 100%;
+}
+.card-info {
+  width: 100%;
+  padding: 20px;
+}
+.card-info .card-title {
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.card-info .card-description {
+  width: 100%;
+  height: 80px;
+  line-height: 1.3;
+  max-height: 3.9em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card-info .card-button {
+  margin: 20px 0 0;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footerBgColor);
+  color: var(--footerTextColor);
+  padding: 20px 0;
+
+  font-size: 0.9rem;
+}
+footer .container {
+  justify-content: space-between;
+}
+.footer-left {
+  width: 70%;
+}
+footer .logo {
+  margin-bottom: 20px;
+}
+.footer-nav {
+  margin-bottom: 10px;
+}
+footer .nav-item {
+  margin-right: 10px;
+}
+footer .nav-item:last-child {
+  margin-right: 0;
+}
+.footer-nav .nav-item {
+  font-weight: bold;
+}
+.footer-nav .nav-item a {
+  color: var(--footerTextColor);
+}
+.slogan {
+  margin: 10px 0;
+  /* color: var(--hoverColor); */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.footer-right {
+  width: 30%;
+}
+.sns {
+  margin-bottom: 15px;
+}
+.sns .sns-item {
+  background-color: var(--hoverColor);
+  margin-right: 10px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: baseline;
+}
+.sns .sns-item i {
+  padding: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.customerCenter .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.customerCenterTime .centerTel {
+  margin-right: 10px;
+}
+.customerCenterTime .centerTel:last-child {
+  margin-right: 0;
+}
+.customerCenterTime .centerTel:first-child li {
+  font-weight: bold;
+}
+.customerCenterTime .centerTel li {
+  margin-bottom: 3px;
+}
+.customerCenterTime .centerTel li:last-child {
+  margin-bottom: 0;
+}
