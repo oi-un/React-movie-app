@@ -1,6 +1,10 @@
 import Logo from "./Logo";
 
-export default function Header({ setKeyword }) {
+export default function Header({ keyword, setKeyword }) {
+  const searchMovie = (e) => {
+    setKeyword(e.target.value);
+    console.log(keyword);
+  };
   return (
     <>
       <div className="header-bg">
@@ -37,7 +41,7 @@ export default function Header({ setKeyword }) {
           </ul>
 
           <div className="search">
-            <input type="text" placeholder="검색어 입력" />
+            <input type="text" placeholder="검색어 입력" onChange={searchMovie} />
             <i className="fa-solid fa-magnifying-glass"></i>
           </div>
         </header>

@@ -1,4 +1,4 @@
-export default function ShowMore({ movies, showMore, setShowMore, movieNum }) {
+export default function ShowMore({ movies, setShowMore, movieNum }) {
   const imgSrc = `https://image.tmdb.org/t/p/w500/${movies[movieNum].poster_path}`;
   return (
     <>
