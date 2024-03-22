@@ -1,10 +1,6 @@
 import Logo from "./Logo";
 
-export default function Header({ keyword, setKeyword }) {
-  const searchMovie = (e) => {
-    setKeyword(e.target.value);
-    console.log(keyword);
-  };
+export default function Header({ searchMovie }) {
   return (
     <>
       <div className="header-bg">
@@ -17,7 +13,7 @@ export default function Header({ keyword, setKeyword }) {
             <li
               className="nav-item active-item"
               onClick={() => {
-                setKeyword("now_playing");
+                searchMovie("now_playing");
               }}
             >
               <a href="#">오늘의 상영작</a>
@@ -25,7 +21,7 @@ export default function Header({ keyword, setKeyword }) {
             <li
               className="nav-item"
               onClick={() => {
-                setKeyword("popular");
+                searchMovie("popular");
               }}
             >
               <a href="#">인기 상영작</a>
@@ -33,7 +29,7 @@ export default function Header({ keyword, setKeyword }) {
             <li
               className="nav-item"
               onClick={() => {
-                setKeyword("top_rated");
+                searchMovie("top_rated");
               }}
             >
               <a href="#">평점순</a>
@@ -41,7 +37,13 @@ export default function Header({ keyword, setKeyword }) {
           </ul>
 
           <div className="search">
-            <input type="text" placeholder="검색어 입력" onChange={searchMovie} />
+            <input
+              type="text"
+              placeholder="검색어 입력"
+              onChange={(e) => {
+                searchMovie(e.target.value);
+              }}
+            />
             <i className="fa-solid fa-magnifying-glass"></i>
           </div>
         </header>

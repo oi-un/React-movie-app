@@ -15,7 +15,7 @@ export default function ShowMore({ movies, setShowMore, movieNum }) {
             setShowMore(false);
           }}
         >
-          <i class="fa-solid fa-xmark"></i>
+          <i className="fa-solid fa-xmark"></i>
         </span>
         <div className="both-box"></div>
         <div className="show-main flex">

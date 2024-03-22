@@ -10,7 +10,7 @@ export default function Main({ movies, showMore, setShowMore, movieNum, setMovie
         })}
       </div>
 
-      {showMore == true ? <ShowMore showMore={showMore} setShowMore={setShowMore} movies={movies} movieNum={movieNum} /> : null}
+      {showMore == true ? <ShowMore setShowMore={setShowMore} movies={movies} movieNum={movieNum} /> : null}
     </>
   );
 }

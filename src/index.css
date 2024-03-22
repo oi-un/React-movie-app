@@ -171,6 +171,9 @@ header {
   font-weight: 600;
   margin-bottom: 20px;
 }
+.card-info .card-title:hover {
+  text-decoration-line: underline;
+}
 .card-info .card-description {
   width: 100%;
   height: 80px;
