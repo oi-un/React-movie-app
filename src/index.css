@@ -24,6 +24,7 @@
 .container {
   width: 100%;
   max-width: 1200px;
+  padding: 0 10px;
   margin: auto;
   font-family: "S-CoreDream-3Light";
 }
@@ -153,6 +154,7 @@ header {
   width: 24%;
   background-color: #eeeeee99;
   border-radius: 10px;
+  overflow: hidden;
   margin-bottom: 20px;
 
   flex-direction: column;
@@ -192,86 +194,90 @@ header {
 footer {
   background-color: var(--footerBgColor);
   color: var(--footerTextColor);
-  padding: 20px 0;
+  padding: 30px 0;
+  font-size: 0.85rem;
+}
 
-  font-size: 0.9rem;
+.footer-top {
+  margin-bottom: 20px;
 }
-footer .container {
-  justify-content: space-between;
-}
+
+.footer-top .logo,
 .footer-left {
   width: 70%;
 }
-footer .logo {
-  margin-bottom: 20px;
-}
-.footer-nav {
-  margin-bottom: 10px;
-}
-footer .nav-item {
-  margin-right: 10px;
-}
-footer .nav-item:last-child {
-  margin-right: 0;
-}
-.footer-nav .nav-item {
-  font-weight: bold;
-}
-.footer-nav .nav-item a {
-  color: var(--footerTextColor);
-}
-footer .company-info {
-  margin-bottom: 5px;
-}
-footer .company-info:last-child {
-  margin-bottom: 0;
-}
-.slogan {
-  margin: 10px 0;
-  /* color: var(--hoverColor); */
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
+.footer-top .sns,
 .footer-right {
   width: 30%;
 }
-.sns {
-  margin-bottom: 15px;
-}
-.sns .sns-item {
-  background-color: var(--hoverColor);
-  margin-right: 10px;
-  border-radius: 50%;
-  text-align: center;
-  vertical-align: baseline;
-}
-.sns .sns-item i {
-  padding: 10px;
-  font-size: 1.3rem;
-  color: #fff;
-}
 
-.customerCenter .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 8px;
+.footer-top .sns .sns-item {
+  margin-right: 20px;
 }
-
-.customerCenterTime .centerTel {
-  margin-right: 10px;
-}
-.customerCenterTime .centerTel:last-child {
+.footer-top .sns .sns-item:last-child {
   margin-right: 0;
 }
-.customerCenterTime .centerTel:first-child li {
+.footer-top .sns .sns-item i {
+  color: #fff;
+  background-color: var(--hoverColor);
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.footer-bottom {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-bottom .footer-left,
+.footer-bottom .footer-right {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-bottom .footer-left .footer-nav {
+  margin-bottom: 20px;
+}
+.footer-bottom .footer-left .footer-nav .nav-item {
+  font-size: 0.95rem;
   font-weight: bold;
+  margin-right: 10px;
 }
-.customerCenterTime .centerTel li {
-  margin-bottom: 3px;
+.footer-bottom .footer-left .footer-nav .nav-item:last-child {
+  margin-right: 0;
 }
-.customerCenterTime .centerTel li:last-child {
-  margin-bottom: 0;
+.footer-bottom .footer-left .footer-nav .nav-item a {
+  color: var(--footerTextColor);
+}
+.footer-bottom .footer-left .company-info {
+  margin-bottom: 5px;
+}
+.footer-bottom .footer-left .company-info .nav-item {
+  margin-right: 15px;
+}
+.footer-bottom .footer-left .company-info .nav-item:last-child {
+  margin-right: 0;
+}
+.footer-bottom .footer-left .slogan {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a0a09a;
+}
+.footer-bottom .footer-left .copyright {
+  font-size: 0.8rem;
+  color: #a0a09a;
+}
+
+.footer-bottom .footer-right .customerCenter .title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.footer-bottom .footer-right .customerCenter .customerCenterTime .centerTel {
+  margin-right: 10px;
+}
+.footer-bottom .footer-right .customerCenter .customerCenterTime .centerTel li {
+  line-height: 1.1rem;
 }
 
 /* Show More */
@@ -331,4 +337,58 @@ footer .company-info:last-child {
 }
 .show-main .movie-info .movie-description {
   line-height: 1.5rem;
+}
+
+/* 데스크탑 - 작은사이즈 */
+@media screen and (max-width: 992px) {
+  footer {
+    text-align: center;
+  }
+  .footer-top {
+    flex-wrap: wrap;
+  }
+  .footer-top .logo,
+  .footer-top .sns,
+  .footer-bottom .footer-left {
+    width: 100%;
+  }
+  .footer-top .sns {
+    margin: 20px 0;
+    justify-content: center;
+  }
+
+  .footer-bottom .footer-left .footer-nav {
+    justify-content: space-around;
+  }
+  .footer-bottom .footer-left .slogan {
+    margin-top: 20px;
+  }
+
+  .footer-bottom .footer-right {
+    display: none;
+  }
+}
+
+/* 태블릿 */
+@media screen and (max-width: 768px) {
+}
+
+/* 모바일 */
+@media screen and (max-width: 600px) {
+  .footer-bottom .footer-left .footer-nav {
+    flex-direction: column;
+  }
+  .footer-bottom .footer-left .footer-nav .nav-item {
+    margin-bottom: 10px;
+  }
+  .footer-bottom .footer-left .company-info {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .footer-bottom .footer-left .company-info:nth-child(4) {
+    display: none;
+  }
+  .footer-bottom .footer-left .company-info .nav-item {
+    line-height: 1.1rem;
+  }
 }
