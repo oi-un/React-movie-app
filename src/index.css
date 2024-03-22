@@ -47,6 +47,11 @@
 .btn-main:hover {
   background-color: var(--hoverColor);
 }
+.both-box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 /* LOGO */
 @font-face {
@@ -212,6 +217,12 @@ footer .nav-item:last-child {
 .footer-nav .nav-item a {
   color: var(--footerTextColor);
 }
+footer .company-info {
+  margin-bottom: 5px;
+}
+footer .company-info:last-child {
+  margin-bottom: 0;
+}
 .slogan {
   margin: 10px 0;
   /* color: var(--hoverColor); */
@@ -258,4 +269,63 @@ footer .nav-item:last-child {
 }
 .customerCenterTime .centerTel li:last-child {
   margin-bottom: 0;
+}
+
+/* Show More */
+.black-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.show-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 20px;
+}
+.show-bg .close-btn {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.show-main {
+  width: 100%;
+  padding: 0 50px 50px;
+  align-items: flex-start;
+}
+.show-main .movie-img {
+  width: 25%;
+  margin-right: 20px;
+}
+.show-main .movie-img img {
+  width: 100%;
+}
+.show-main .movie-info {
+  width: 75%;
+  padding-top: 30px;
+}
+.show-main .movie-info .movie-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.show-main .movie-info .movie-info-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 20px 0 10px;
+}
+.show-main .movie-info .movie-description {
+  line-height: 1.5rem;
 }
